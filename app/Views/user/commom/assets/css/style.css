@@ -1,0 +1,17 @@
+.cart-table >tr>th {
+    padding: 18px 16px 18px 16px !important;
+}
+
+.btn-order {
+    background-color: #ff7004;
+    border: #ff7004;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 18px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+}

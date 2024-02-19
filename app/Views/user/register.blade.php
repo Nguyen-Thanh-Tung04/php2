@@ -1,0 +1,85 @@
+@extends('user.commom.layout')
+@section('content')
+<!-- breadcrumb-area start -->
+
+<!-- login area start -->
+<div class="login-register-area pt-100px pb-100px" style="margin-left: 450px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a href="<?= route("register") ?>">
+                            <h4>Đăng nhập</h4>
+                        </a>
+                        <a class="active" href="#">
+                            <h4>Đăng ký</h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg2" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form id="myForm" action="<?= route("register") ?>" method="post">
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="username" class="form-control"
+                                                placeholder="Username" required>
+                                            <!-- <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="email" name="email" class="form-control" placeholder="Email"
+                                                required>
+                                            <!-- <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="password" name="password" class="form-control"
+                                                placeholder="Mât khẩu" required>
+                                            <!-- <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-lock"></span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="password" name="re_password" class="form-control"
+                                                placeholder="Nhập lại mật khẩu" required>
+                                            <!-- <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-lock"></span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="row">
+                                            <?php
+                                            if ($error_message != '') {
+                                                echo "<div class='error text-danger' style='padding: 10px;margin-bottom:20px;'>" . $error_message . "</div>";
+                                            }
+                                            ?>
+                                            <div class="col-7">
+                                            </div>
+                                            <div class="col-5">
+                                                <button type="submit" name="register"
+                                                    class="btn btn-primary btn-block">đăng ký</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login area end -->
+@endsection
